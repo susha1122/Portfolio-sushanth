@@ -3,6 +3,7 @@ import { useRef, useMemo, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import { EffectComposer, N8AO } from "@react-three/postprocessing";
+import SkillsList from "./SkillsList";
 import {
   BallCollider,
   Physics,
@@ -13,14 +14,15 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
+  "/images/html5.webp",
+  "/images/css3.webp",
+  "/images/javascript.webp",
   "/images/react2.webp",
   "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
   "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/python.webp",
+  "/images/azure.webp",
+  "/images/aws.webp",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -207,6 +209,7 @@ const TechStack = () => {
           <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
         </EffectComposer>
       </Canvas>
+      <SkillsList />
     </div>
   );
 };

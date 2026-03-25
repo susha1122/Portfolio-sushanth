@@ -94,10 +94,13 @@ body {
 .techstack {
   width: 100%;
   position: relative;
-  height: var(--vh);
+  height: auto;
   margin: auto;
   margin-top: 50px;
-  margin-bottom: -100px;
+  margin-bottom: 50px;
+}
+.tech-canvas {
+  height: var(--vh) !important;
 }
 
 .techstack h2 {

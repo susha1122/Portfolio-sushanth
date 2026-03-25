@@ -1,0 +1,113 @@
+.skills-list-container {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: 0 auto;
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.skills-section-title {
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.skills-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.skills-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--accentColor);
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0; /* Handled by GSAP */
+}
+
+.skill-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.skill-icon {
+  font-size: 32px;
+  color: var(--accentColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.skill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-content h5 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}
+
+.skill-content p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #adacac;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-section-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  
+  .category-title {
+    font-size: 26px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-card {
+    padding: 20px;
+  }
+}

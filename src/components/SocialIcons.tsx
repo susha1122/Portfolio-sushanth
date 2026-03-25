@@ -1,8 +1,6 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
-  FaXTwitter,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -60,32 +58,32 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com/susha1122" target="_blank">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a href="https://www.linkedin.com/in/sushanth-thakur/" target="_blank">
             <FaLinkedinIn />
           </a>
         </span>
-        <span>
-          <a href="https://x.com" target="_blank">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
-          </a>
-        </span>
       </div>
-      <a className="resume-button" href="#">
-        <HoverLinks text="RESUME" />
-        <span>
-          <TbNotes />
-        </span>
-      </a>
+      <div className="resume-container">
+        <div className="resume-button">
+          <HoverLinks text="RESUME" />
+          <span>
+            <TbNotes />
+          </span>
+        </div>
+        <div className="resume-dropdown">
+          <a href="#" className="resume-link" data-cursor="disable">
+            Frontend Developer
+          </a>
+          <a href="#" className="resume-link" data-cursor="disable">
+            AI Engineer
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

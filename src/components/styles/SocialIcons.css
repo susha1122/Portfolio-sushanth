@@ -43,13 +43,21 @@
   will-change: left, top;
   transition: transform 0.3s ease-out;
 }
-.resume-button {
+.resume-container {
   position: absolute;
   z-index: 99;
+  bottom: 0px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transform-origin: right bottom;
+  transform: translateX(100%) rotateZ(-90deg) translateX(40px);
+}
+
+.resume-button {
   display: flex;
   gap: 5px;
-  bottom: 40px;
-  right: 0;
   width: auto;
   text-wrap: nowrap;
   letter-spacing: 4px;
@@ -59,18 +67,59 @@
   color: #5e5e5e;
   cursor: pointer;
   transition: 0.5s;
-  transform-origin: left bottom;
-  transform: translateX(100%) rotateZ(-90deg);
 }
-.resume-button:hover {
+
+.resume-container:hover .resume-button {
   color: #fff;
 }
+
 div.resume-button span {
   color: #fff;
   font-size: 17px;
   margin-top: -1px;
   display: flex;
   align-items: center;
+}
+
+.resume-dropdown {
+  position: absolute;
+  bottom: 150%;
+  right: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-bottom: 10px;
+}
+
+.resume-container:hover .resume-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.resume-link {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #eae5ec;
+  font-size: 13px;
+  font-weight: 500;
+  text-wrap: nowrap;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.resume-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-5px);
+  color: #fff;
 }
 .check-line {
   position: fixed;
@@ -91,8 +140,11 @@ div.resume-button span {
   }
 }
 @media only screen and (min-width: 768px) {
-  .resume-button {
+  .resume-container {
     transform: none;
+    bottom: 40px;
+  }
+  .resume-button {
     font-size: 20px;
     line-height: 20px;
   }
