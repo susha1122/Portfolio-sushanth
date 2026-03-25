@@ -76,10 +76,10 @@ const SocialIcons = () => {
           </span>
         </div>
         <div className="resume-dropdown">
-          <a href="#" className="resume-link" data-cursor="disable">
+          <a href="https://drive.google.com/file/d/1MxYDJPsz7GFSJ1cxonrUodGzL6oN9Aek/view?usp=sharing" className="resume-link" data-cursor="disable">
             Frontend Developer
           </a>
-          <a href="#" className="resume-link" data-cursor="disable">
+          <a href="https://drive.google.com/file/d/16ta9kQ7XsMbu8p2vars_djDYo7mjgd5P/view?usp=sharing" className="resume-link" data-cursor="disable">
             AI Engineer
           </a>
         </div>
