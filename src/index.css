@@ -32,7 +32,8 @@ h6 {
   font-family: "Geist", sans-serif;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 a {
   color: inherit;
@@ -78,6 +79,7 @@ body {
 .container1 {
   width: var(--cWidth);
   height: var(--vh);
+  min-height: 100svh;
   margin: auto;
   position: relative;
 }
